@@ -1,0 +1,27 @@
+{
+    "name": "TLDR; AI",
+    "description": "AI-powered TL;DR for the busy modern reader.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+      "48": "/assets/icons/48.png",
+      "128": "/assets/icons/128.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+        "48": "/assets/icons/48.png",
+        "128": "/assets/icons/128.png"
+        }
+      },
+      "permissions": [
+        "contextMenus",
+        "notifications",
+        "storage",
+        "clipboardWrite",
+        "activeTab"
+      ],
+      "background": {
+        "service_worker": "background.js"
+      }
+}

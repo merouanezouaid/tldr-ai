@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/popup.css">
+    <style type="text/css">
+        @font-face {
+    font-family: 'nflx';
+    src: url('/assets/fonts/nflx.ttf');
+}
+body {
+  min-width: 340px; /* your desired width */
+  max-width: 340px;
+  min-height: 538px;
+  position: relative;
+  font-family: nflx, "sans-serif";
+  vertical-align:middle;
+}
+
+.center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+textarea {
+        margin: 20px;
+        width: 50%;
+        height: 100px !important;
+}
+
+p{
+  margin: 0px;
+}
+
+.items {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.btn-dark {
+  background-color: black !important;
+  color: white !important;
+}
+
+</style >
+</head>
+  <body>
+   <div id="tldr">
+    <div id="tldr-header">
+      <h1 class="text-center">TLDR; AI</h1>
+    </div>
+    <div id="tldr-containers">
+      <div class="form-floating text-center">
+        <label for="tldr-text">Let the AI magic happen</label>
+        <div class="center">
+          <textarea class="form-control" name="text" placeholder="Drop your text here" id="tldr-text"></textarea>
+        </div>
+      </div>
+      <div class="tldr-buttons items center">
+        <button type="button" id="tldr-button" class="btn btn-dark btn-lg btn-block">TLDR!
+        </button>
+      </div>
+      <div class="form-floating text-center">
+        <label class="h3" id="output-label" for="tldr-text"></label>
+        <p><em id="keywords"></em></p>
+        <div class="loader" id="loader" style="display: none; width: '50%'">Loading...</div>
+        <div class="center">
+              <textarea class="form-control" name="text" id="output" style="display: none; resize: none;"></textarea>
+        </div>
+      </div>
+      <div class="tldr-buttons items center">
+        <button type="button" id="copy" class="btn btn-success btn-block" style="display: none;">
+          ✂️ Copy to Clipboard
+        </button>
+    </div>
+
+    
+   </div>
+   <script src="assets/js/popup.js"></script>
+  </body>
+</html>
