@@ -75,7 +75,7 @@ const getTLDR = message => {
 	  n: 1
 	};
 	
-  const apiKey =  "your-openai-api-key";
+  const apiKey =  "YOUR_API_KEY";
   
   fetch('https://api.openai.com/v1/completions', {
 	  method: 'POST',
