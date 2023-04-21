@@ -11,6 +11,6 @@ To install the extension, follow these steps:
 * Click the "Load unpacked" button in the upper left-hand corner
 * Select the folder containing the extension files
 
-Usage
+# Usage
 To use the extension, simply highlight the text you want to summarize and click the extension icon in your browser toolbar. The extension will generate a summary of the selected text and display it in a pop-up window.
 
