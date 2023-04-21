@@ -56,7 +56,7 @@ const getTLDR = message => {
 //     n: 1
 //   };
   
-// const apiKey =  "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";
+// const apiKey =  "your_api_key";
 
 
 // fetch('https://api.openai.com/v1/completions', {
