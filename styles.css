@@ -1,0 +1,14 @@
+#x {
+    background-color: red;
+    width: 12px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#x.active {
+    visibility: visible;
+    opacity: 1;
+}

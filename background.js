@@ -21,9 +21,6 @@ chrome.runtime.onMessage.addListener( data => {
       alert(result);
     }
   } );
-
-  
-
   
   const tldr = message => {
     chrome.storage.local.get( ['tldrCount'], data => {
@@ -44,36 +41,34 @@ chrome.runtime.onMessage.addListener( data => {
 
 const getTLDR = message => {
 
-//   const payload = {
-//     model: "text-davinci-003",
-//     prompt: "Give me a TLDR of the following text: " + message ,
-//     temperature: 0.7,
-//     max_tokens: 200,
-//     top_p: 1,
-//     frequency_penalty: 0,
-//     presence_penalty: 0,
-//     stream: false,
-//     n: 1
-//   };
+  const payload = {
+    model: "text-davinci-003",
+    prompt: "Give me a TLDR of the following text: " + message ,
+    temperature: 0.7,
+    max_tokens: 200,
+    top_p: 1,
+    frequency_penalty: 0,
+    presence_penalty: 0,
+    stream: false,
+    n: 1
+  };
   
-// const apiKey =  "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";
+const apiKey =  "YOUR_API_KEY";
 
 
-// fetch('https://api.openai.com/v1/completions', {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${apiKey}`
-//     },
-//     body: JSON.stringify(payload)
-// }).then(response => response.json()).then(data => {
-//   console.log(data);
-//   const summary = data.choices[0].text;
-//   return 'According to the The Athletic, the Blues failed to submit the correct paperwork ahead of the January 31 deadline, with other reports claiming Chelsea sent the wrong documents on three separate occasions.'
-// });
+fetch('https://api.openai.com/v1/completions', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+    },
+    body: JSON.stringify(payload)
+}).then(response => response.json()).then(data => {
+  console.log(data);
+  const summary = data.choices[0].text;
+  return summary;
+});
 
-
-return 'According to the The Athletic, the Blues failed to submit the correct paperwork ahead of the January 31 deadline, with other reports claiming Chelsea sent the wrong documents on three separate occasions.'
 
 
 }

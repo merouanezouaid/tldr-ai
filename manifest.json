@@ -21,6 +21,10 @@
         "clipboardWrite",
         "activeTab"
       ],
+      "content_scripts": [{
+        "css": ["styles.css"],
+        "js": ["content.js"]
+      }],
       "background": {
         "service_worker": "background.js"
       }

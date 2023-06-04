@@ -55,9 +55,12 @@ function copy2clipboard() {
 }
 
 
-  copy.addEventListener("click", function() {
+copy.addEventListener("click", function() {
 	copy2clipboard(copy.value)
-  });
+});
+
+
+
 
 const getTLDR = message => {
 
@@ -110,7 +113,7 @@ const getTLDR = message => {
 		copy.style.display = "block";
 	  }
 	  tldr.disabled = false;
-	  tldr.innerHTML = "Re-TLDR!";
+	  tldr.innerHTML = "Resummarize!";
 	})
   })
   

@@ -87,14 +87,15 @@
   src: url('/assets/fonts/nflx.ttf');
 }
 
+
 body {
-  min-width: 340px; /* your desired width */
-  max-width: 340px;
+  min-width: 400px; /* your desired width */
+  max-width: 400px;
   position: relative;
   font-family: nflx, "sans-serif";
-  vertical-align:middle;
+  vertical-align: middle;
   background: linear-gradient(rgb(92, 116, 204) 0%, rgb(82, 105, 190) 140px, rgb(41, 63, 135) 640px, rgb(33, 52, 122) max(100vh, 700px), rgb(33, 52, 122) 100%);
-  min-height: 570px;
+  min-height: 600px;
 }
 
 .center {
@@ -106,7 +107,7 @@ body {
 textarea {
   margin: 20px;
   width: 50%;
-  height: 100px !important;
+  height: 80px !important;
 }
 
 p{
@@ -123,10 +124,17 @@ p{
   color: white !important;
 }
 
+.tldr-button{
+  background: linear-gradient(263.02deg, rgba(37, 77, 137, 0.8) 0%, rgba(108, 139, 185, 0.8) 100%);
+  border-radius: 10px;
+}
+
 
 .title {
   color: white;
   text-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin-left: 60px;
 }
 
 .tldr-slogan, #keywords{
@@ -136,7 +144,6 @@ p{
 
 .form-control {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
-  resize: none;
 }
 
 footer {
@@ -162,4 +169,11 @@ footer {
 
 svg {
   fill: white !important;
+}
+
+img {
+  margin-left: 6px;
+  margin-top: -13px;
+  padding-left: 8px;
+  height: 20px;
 }
